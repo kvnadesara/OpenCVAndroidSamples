@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OpencvSamples</string>
+    <string name="activity_main">OpenCV Samples</string>
+    <string name="activity_object_detect">Object Detect</string>
+
+    <string name="hue_min">Hue::Min</string>
+    <string name="hue_max">Hue::Max</string>
+    <string name="sat_min">Sat::Min</string>
+    <string name="sat_max">Sat::Max</string>
+    <string name="val_min">Val::Min</string>
+    <string name="val_max">Val::Max</string>
+</resources>
