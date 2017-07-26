@@ -114,7 +114,6 @@ public class ObjectDetectActivity extends AppCompatActivity implements CameraBri
         sbSatMin.setOnSeekBarChangeListener(this);
         sbValueMax.setOnSeekBarChangeListener(this);
         sbValueMin.setOnSeekBarChangeListener(this);
-
         seekBar2LabelMapping = new HashMap<AppCompatSeekBar, AppCompatTextView>() {{
             put(sbHueMax, lblHueMaxProgress);
             put(sbHueMin, lblHueMinProgress);
@@ -123,6 +122,14 @@ public class ObjectDetectActivity extends AppCompatActivity implements CameraBri
             put(sbValueMax, lblValueMaxProgress);
             put(sbValueMin, lblValueMinProgress);
         }};
+
+        // set the green color hsv
+        sbHueMax.setProgress(ObjectDetectConstants.GreenHSV.hMax);
+        sbHueMin.setProgress(ObjectDetectConstants.GreenHSV.hMin);
+        sbSatMax.setProgress(ObjectDetectConstants.GreenHSV.sMax);
+        sbSatMin.setProgress(ObjectDetectConstants.GreenHSV.sMin);
+        sbValueMax.setProgress(ObjectDetectConstants.GreenHSV.vMax);
+        sbValueMin.setProgress(ObjectDetectConstants.GreenHSV.vMin);
 
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
@@ -223,8 +230,10 @@ public class ObjectDetectActivity extends AppCompatActivity implements CameraBri
     }
 
     @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {}
+    public void onStartTrackingTouch(SeekBar seekBar) {
+    }
 
     @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {}
+    public void onStopTrackingTouch(SeekBar seekBar) {
+    }
 }
