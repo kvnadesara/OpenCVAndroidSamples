@@ -26,7 +26,7 @@
             android:layout_height="fill_parent"
             android:visibility="gone"
             app:camera_id="any"
-            app:show_fps="true" />
+            app:show_fps="false" />
 
     </FrameLayout>
 
@@ -49,10 +49,25 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="0dp"
+        android:max="500"
+        android:progress="0"
         app:layout_constraintBottom_toTopOf="@+id/sbHueMax"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/sbHueMax"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/lblHueMinProgress" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblHueMinProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/sbHueMin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sbHueMin"
+        app:layout_constraintVertical_bias="0"
+        tools:text="0" />
 
     <!--Hue Max -->
 
@@ -73,9 +88,24 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
+        android:max="500"
+        android:progress="0"
         app:layout_constraintBottom_toTopOf="@+id/sbSatMin"
         app:layout_constraintLeft_toLeftOf="@+id/sbSatMin"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/lblHueMaxProgress" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblHueMaxProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/sbHueMax"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sbHueMax"
+        app:layout_constraintVertical_bias="0"
+        tools:text="0" />
 
     <!--Sat Min -->
 
@@ -96,9 +126,24 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:max="500"
+        android:progress="0"
         app:layout_constraintBottom_toTopOf="@+id/sbSatMax"
         app:layout_constraintLeft_toLeftOf="@+id/sbSatMax"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/lblSatMinProgress" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblSatMinProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/sbSatMin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sbSatMin"
+        app:layout_constraintVertical_bias="0"
+        tools:text="0" />
 
     <!--Sat Max -->
 
@@ -119,9 +164,24 @@
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="0dp"
+        android:max="500"
+        android:progress="0"
         app:layout_constraintBottom_toTopOf="@+id/sbValueMin"
         app:layout_constraintLeft_toLeftOf="@+id/sbValueMin"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/lblSatMaxProgress" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblSatMaxProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/sbSatMax"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sbSatMax"
+        app:layout_constraintVertical_bias="0"
+        tools:text="0" />
 
     <!--Val Min -->
 
@@ -143,13 +203,28 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:max="255"
+        android:max="500"
         android:progress="0"
         app:layout_constraintBottom_toTopOf="@+id/sbValueMax"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintLeft_toRightOf="@+id/lblValueMax"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/lblValueMinProgress" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblValueMinProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sbValueMin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sbValueMin"
+        app:layout_constraintVertical_bias="0"
+        tools:text="0" />
 
     <!--Val Max-->
+
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/lblValueMax"
@@ -169,12 +244,25 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:max="255"
+        android:max="500"
         android:progress="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintLeft_toRightOf="@+id/lblValueMax"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/lblValueMaxProgress" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblValueMaxProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sbValueMax"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sbValueMax"
+        app:layout_constraintVertical_bias="0"
+        tools:text="0" />
 
 
 </android.support.constraint.ConstraintLayout>
