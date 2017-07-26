@@ -52,9 +52,6 @@ public class MainActivity extends AppCompatActivity implements BaseQuickAdapter.
     private void prepareActivitySampleMapping() {
         activitySampleMapping = new LinkedHashMap<>();
         activitySampleMapping.put("Detect Object", ObjectDetectActivity.class);
-        activitySampleMapping.put("Detect Object2", ObjectDetectActivity.class);
-        activitySampleMapping.put("Detect Object3", ObjectDetectActivity.class);
-        activitySampleMapping.put("Detect Object4", ObjectDetectActivity.class);
     }
 
     @Override
@@ -67,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements BaseQuickAdapter.
 
     private class OpenCVSampleAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
-        public OpenCVSampleAdapter(@Nullable List<String> data) {
+        OpenCVSampleAdapter(@Nullable List<String> data) {
             super(R.layout.raw_sample_item, data);
         }
 

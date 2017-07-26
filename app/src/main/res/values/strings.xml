@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OpencvSamples</string>
+    <string name="app_name">OpenCV Samples</string>
     <string name="activity_main">OpenCV Samples</string>
     <string name="activity_object_detect">Object Detect</string>
 

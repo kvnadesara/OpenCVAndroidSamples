@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight">
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/lblSample"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="0dp"
@@ -15,7 +16,6 @@
         android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
